@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Topic {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  category    String   // "history" or "geography"
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  threads     Thread[]
+  posts       Post[]
+  postedContent PostedContent[]
+
+  @@map("topics")
+}
+
+model Thread {
+  id        String   @id @default(uuid())
+  topicId   String
+  topic     Topic    @relation(fields: [topicId], references: [id])
+  title     String
+  status    String   @default("draft") // "draft", "scheduled", "published", "failed"
+  scheduledAt DateTime?
+  publishedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  posts     Post[]
+
+  @@map("threads")
+}
+
+model Post {
+  id          String   @id @default(uuid())
+  threadId    String
+  thread      Thread   @relation(fields: [threadId], references: [id])
+  topicId     String
+  topic       Topic    @relation(fields: [topicId], references: [id])
+  content     String
+  order       Int      // Position in the thread (1-10)
+  status      String   @default("draft") // "draft", "scheduled", "published", "failed"
+  twitterId   String?  // Twitter post ID after publishing
+  scheduledAt DateTime?
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("posts")
+}
+
+model PostedContent {
+  id        String   @id @default(uuid())
+  topicId   String
+  topic     Topic    @relation(fields: [topicId], references: [id])
+  content   String   @unique // Hash or unique identifier to prevent duplicates
+  postedAt  DateTime @default(now())
+  threadId  String?
+  postId    String?
+
+  @@map("posted_content")
+} 
