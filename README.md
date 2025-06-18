@@ -7,7 +7,7 @@
 
 <p align="center">
   <b>Automate Twitter threads about history and geography using Grok AI and Clean Architecture.</b><br/>
-  <a href="https://github.com/yourusername/virtual-influencer"><strong>View on GitHub »</strong></a>
+  <a href="https://github.com/aepel/virtual-x-influencer"><strong>View on GitHub »</strong></a>
   <br/>
   <br/>
   <a href="#features">Features</a>
@@ -22,9 +22,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yourusername/virtual-influencer/actions"><img src="https://img.shields.io/github/actions/workflow/status/yourusername/virtual-influencer/ci.yml?branch=master" alt="Build Status"></a>
-  <a href="https://github.com/yourusername/virtual-influencer/blob/master/LICENSE"><img src="https://img.shields.io/github/license/yourusername/virtual-influencer.svg" alt="License"></a>
-  <a href="https://github.com/yourusername/virtual-influencer/stargazers"><img src="https://img.shields.io/github/stars/yourusername/virtual-influencer.svg" alt="Stars"></a>
+  <a href="https://github.com/aepel/virtual-x-influencer/actions"><img src="https://img.shields.io/github/actions/workflow/status/aepel/virtual-x-influencer/ci.yml?branch=main" alt="Build Status"></a>
+  <a href="https://github.com/aepel/virtual-x-influencer/blob/main/LICENSE"><img src="https://img.shields.io/github/license/aepel/virtual-x-influencer.svg" alt="License"></a>
+  <a href="https://github.com/aepel/virtual-x-influencer/stargazers"><img src="https://img.shields.io/github/stars/aepel/virtual-x-influencer.svg" alt="Stars"></a>
 </p>
 
 ---
@@ -81,8 +81,8 @@
 
 ### Installation
 ```bash
-git clone https://github.com/yourusername/virtual-influencer.git
-cd virtual-influencer
+git clone https://github.com/aepel/virtual-x-influencer.git
+cd virtual-x-influencer
 yarn install
 cp .env.example .env
 ```
