@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <img src="https://placehold.co/600x150?text=Twitter+Influencer+Backend" alt="Project Logo" width="400"/>
+  <img src="https://sora.chatgpt.com/g/gen_01jy1y53p6f8bbzjj6hgvxrqj4" alt="Twitter Influencer Backend Logo" width="400"/>
 </p>
 
 <h1 align="center">Twitter Influencer Backend</h1>
@@ -25,6 +25,7 @@
   <a href="https://github.com/aepel/virtual-x-influencer/actions"><img src="https://img.shields.io/github/actions/workflow/status/aepel/virtual-x-influencer/ci.yml?branch=main" alt="Build Status"></a>
   <a href="https://github.com/aepel/virtual-x-influencer/blob/main/LICENSE"><img src="https://img.shields.io/github/license/aepel/virtual-x-influencer.svg" alt="License"></a>
   <a href="https://github.com/aepel/virtual-x-influencer/stargazers"><img src="https://img.shields.io/github/stars/aepel/virtual-x-influencer.svg" alt="Stars"></a>
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen.svg" alt="Node.js"></a>
 </p>
 
 ---
@@ -74,7 +75,7 @@
 ## Quick Start
 
 ### Prerequisites
-- Node.js (v18+)
+- **Node.js 22+** (Latest LTS recommended)
 - Yarn or npm
 - Grok API access
 - Twitter API access (for production)
